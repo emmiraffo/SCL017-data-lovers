@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+    text-align: center;
+}
+
+.cPage {
+  display: flex;
+  position:relative;
+  background-color: #0E3237;
+  justify-content:start;
+  font-family: 'Lora', serif;
+}
+
+.sidebar{
+  width: 300px;
+  height: 100%;
+  background: #05011a;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.cList{
+  display: flex;
+  position: relative;
+  align-items:flex-start;
+  }
+
+
+.container{
+  display: flex;	
+  flex-wrap: wrap;
+	align-items: space-between;
+  margin-left: 25%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-right: 0%;
+	
+   
+  }
+
+.champCard {
+	background-color: #eee;
+	margin: 20px;
+	padding: 2px;
+	text-align: center;
+}
+
+
+.photos{
+  height: 231.175px;
+  width: 204.762px;
+  object-fit: cover;
+  }
+
+.name{
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.title{
+  margin-top: 2px;
+  margin-bottom: 5px;
+  font-weight: lighter;
+  font-size: 90%;
+}
