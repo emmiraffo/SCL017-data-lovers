@@ -1,33 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&display=swap');
 
-body{
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+body {
     background-size:cover;
+    background-image: url('imagenes/mapa.jpg');
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container {
+    height: 400px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 h1{
-    position: absolute;
-    width: 880px;
-    height: 117px;
-    left: calc(50% - 880px/2);
-    top: calc(50% - 117px/2 - 49.5px);
     font-family: Crimson Text;
     font-style: normal;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 70px;
     line-height: 182px;
     text-align: center;
-    color: #FFF7DC;
+    color: #fffae8;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     line-height: 0.8;
 }
 
 h2{
-    position: absolute;
-    width: 307px;
-    height: 18px;
-    left: calc(50% - 307px/2 + 0.5px);
-    top: calc(50% - 18px/2 - 108px);
     font-family: Candara;
     font-style: normal;
     font-weight: bold;
@@ -40,18 +48,29 @@ h2{
 }
 
 .botonesinicio{
-    
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
     width: 200px;
     height: 52px;
-    top: 621px;
     background: rgba(35, 49, 43, 0.8);
     border: 1px solid #F5AA16;
     box-sizing: border-box;
     color: #F5AA16;
     text-align: center;
-    line-height: 0.5;
+    line-height: 3.5;
+    font-size: 14px;
+    font-weight: bold;
 }
-.btn{
-    position: relative;
 
+.btn a:first-child {
+    margin-right: 70px;
 }
+
+.btn a:hover {
+    background: #F5AA16;
+    color: rgba(35, 49, 43, 0.8);
+}
+
+--
+David De Freitas.
