@@ -1,9 +1,15 @@
-import { example } from './data.js';
 import data from './data/lol/lol.js';
+
+import {dropdown} from './data.js';
+
+const button = document.getElementById("dButton");
+    button.addEventListener("click", ()=>{
+    dropdown()
+    });
+
 
 const container = document.getElementById('container');
 const list = Object.values(data.data);
-
 for (let i=0; i < list.length; i++){
 
     const champCard = document.createElement('div');
