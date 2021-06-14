@@ -1,9 +1,6 @@
-// estas funciones son de ejemplo
-
-export const example = () => {
-  return 'example';
+function dropdown() {
+  document.getElementById("dContent").classList.toggle("show");
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+
+export{dropdown};
