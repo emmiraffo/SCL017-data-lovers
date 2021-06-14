@@ -1,0 +1,160 @@
+/*CSS para pagina de Primeros pasos*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family:Crimson Text ;
+    background: rgb(11, 2, 31);
+    font-size: 1rem;
+    /*line-height: 1.5;  */ 
+    overflow:scroll;
+    display: flex;
+    flex-direction: column;
+    color: floralwhite;
+}
+.imgfondo {
+    min-width: 100%;
+    min-height: 100%;
+    height: 100vh;
+}
+/*BLOQUE 1 QUÉ ES LEAGUE OF LEGEND*/
+.container{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    margin: 0%;
+    bottom: 0%;
+    display: block;
+}
+
+.flex-container{
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.video video{
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+.textovideo{
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    padding: 20%;
+    padding-top: 0;
+}
+h1{
+    font-size: 70px;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-style: normal;
+    font-family: Candara;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.549);   
+    text-align: center; 
+ }
+p {
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 0;  
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.549);
+}
+.header-video{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+.header-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background: black;
+    z-index: 1;
+}
+
+/*BLOQUE 2 CÓMO SE JUEGA*/
+.box-text{
+    width: 50%;
+    right: 50%;
+    font-size: 14px;
+    flex-wrap: wrap; align-content: stretch;
+    padding: 30px;
+    margin-left: 40px;
+    text-align: center;    
+}
+.box-text:first-child{
+    align-self: center;
+    background-color: rgba(0, 0, 0, 0.309);
+}
+.box-text:nth-child(2){
+    background-color: rgba(0, 0, 0, 0.309);
+    height: 300px;
+}
+.box-text:last-child{
+    align-self: center;
+    background-color: rgba(0, 0, 0, 0.309);
+    height: 300px;
+}
+.box-habilidades{
+  z-index: 2;  
+}
+.boxcontainer{
+    display: flex;
+    align-content: space-around;
+    position: absolute;
+    height: 800px;
+    font-weight:lighter;  
+}
+
+/*BLOQUE 3 HABILIDADES
+.contenedorhabilidades{
+    position: absolute;
+    }*/
+
+/*BLOQUE 4 GALERIA GAMPEONES*/
+.contenedor{
+    margin: 20%;
+    padding: 10%;
+    position: absolute;
+    margin-top: 0;
+    padding-top: 50px;  
+}
+.galeria{ 
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap; align-content: stretch;
+    height: 100em;
+}
+.personajes{
+    width: 200px;
+    height: 400px;
+    margin: 0px;
+}
+.box{
+    background-color: #D4AF37;
+    width: 200px;
+    height: 500px;
+}
