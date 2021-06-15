@@ -17,33 +17,31 @@ body{
     overflow:scroll;
     display: flex;
     color: floralwhite;
+    flex-direction: column;
 }
 /*CONTENEDOR DE PANTALLA COMPLETA*/
-.Pcontainer{
-    display: flex;
-    position:relative;
-    justify-content:start;
-    font-family: 'Lora', serif;
-    background: rgb(11, 2, 31);
-    flex-direction: column;
+.container{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    margin: 0%;
+    bottom: 0%;
+    display: block;
   }
 
 .imgfondo {
     min-width: 100%;
     min-height: 100%;
     height: 100vh;
-    width: 100vw;
 }
 /*BLOQUE 1 QUÉ ES LEAGUE OF LEGEND*/
 .flex-container{
     display: flex;
-    /*padding-left: 0;
+    padding-left: 0;
     padding-right: 0;
     margin: 0;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;*/
 }
 video{
     min-width: 100%;
@@ -51,8 +49,6 @@ video{
     z-index: 0;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
 }
 .textovideo{
     text-align: center;
@@ -129,10 +125,16 @@ p {
     font-weight:lighter;  
 }
 
-/*BLOQUE 3 HABILIDADES
-.contenedorhabilidades{
-    position: absolute;
-    }*/
+/*BLOQUE 3 HABILIDADES*/
+.bloque3{
+    background-image: url('imagenes/league-legends-2113595.jpg');
+    position: block;
+    min-width: 100%;
+    min-height: 100%;
+    height: 100vh; 
+    background-size:cover; 
+
+}
 
 /*BLOQUE 4 GALERIA GAMPEONES*/
 .contenedor{
