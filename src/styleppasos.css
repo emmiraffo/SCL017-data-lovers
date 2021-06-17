@@ -5,37 +5,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 *{
-    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
 }
 
-body{
-    margin: 0;
-    font-family:Crimson Text ;
+/*Página completa*/
+.container{
+    font-family:Crimson Text;
     background: rgb(11, 2, 31);
-    font-size: 1rem;
-    line-height: 1.5; 
-    overflow:scroll;
+    line-height: 1.3; 
     display: flex;
     color: floralwhite;
     flex-direction: column;
 }
-/*CONTENEDOR DE PANTALLA COMPLETA*/
-.container{
+
+h1{
+    font-size: 6vh;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'Lora', serif; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.549);   
+    text-align: center; 
+ }
+
+p {
+    display: block;
+    margin-bottom: 0;  
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.549);
+    font-size: 3vh;
+}
+
+
+/*¿Qué es League of Legends?*/
+.section1{
     position: relative;
     top: 0%;
     left: 0%;
     margin: 0%;
     bottom: 0%;
     display: block;
-  }
-
-.imgfondo {
-    min-width: 100%;
-    min-height: 100%;
-    height: 100vh;
 }
-/*BLOQUE 1 QUÉ ES LEAGUE OF LEGEND*/
-.flex-container{
+
+.boxcontainer{
     display: flex;
     padding-left: 0;
     padding-right: 0;
@@ -43,98 +56,125 @@ body{
     align-items: center;
     justify-content: center;
 }
+
 video{
     min-width: 100%;
     min-height: 100%;
     z-index: 0;
     top: 0;
     left: 0;
+    filter: brightness(50%);
 }
-.textovideo{
+
+.section1_text{
     text-align: center;
     z-index: 1;
     position: absolute;
     padding: 20%;
 }
-h1{
-    font-size: 70px;
-    margin-bottom: 0;
-    font-weight: bold;
-    font-style: normal;
-    font-family: Candara;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.549);   
-    text-align: center; 
- }
-p {
-    font-size: 1.3rem;
+
+
+
+/*¿Cómo jugar League of Legends?*/
+.section2{
+    position: relative;
+    padding-top: 3%;
+    margin: 0%;
+    bottom: 0;
     display: block;
-    margin-bottom: 0;  
-    text-align: center;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.549);
-    font-size: 20px;
-}
-.header-video{
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-}
-.header-overlay{
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    background: black;
-    z-index: 1;
 }
 
-/*BLOQUE 2 CÓMO SE JUEGA*/
-.box-text{
-    width: 50%;
-    right: 50%;
-    font-size: 14px;
-    flex-wrap: wrap; align-content: stretch;
-    padding: 30px;
-    margin-left: 40px;
-    text-align: center;    
-}
-.box-text:first-child{
-    align-self: center;
-    background-color: rgba(0, 0, 0, 0.309);
-}
-.box-text:nth-child(2){
-    background-color: rgba(0, 0, 0, 0.309);
-    height: 300px;
-}
-.box-text:last-child{
-    align-self: center;
-    background-color: rgba(0, 0, 0, 0.309);
-    height: 300px;
-}
-.box-habilidades{
-  z-index: 2;  
-}
-.boxcontainer{
+.boxcontainer2{
     display: flex;
-    align-content: space-around;
-    position: absolute;
-    height: 800px;
-    font-weight:lighter;  
-}
-
-/*BLOQUE 3 HABILIDADES*/
-.bloque3{
-    background-image: url('imagenes/league-legends-2113595.jpg');
-    position: block;
-    min-width: 100%;
-    min-height: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+    padding-top: 5%;
     height: 100vh; 
-    background-size:cover; 
+    background-size: cover; 
+    background-image: url('imagenes/base.png');
+}
+
+.box-text{ 
+    width: 30%;
+    height: 30%;
+    padding: 2%;  
+    border: 1px solid rgba(119, 79, 34, 0.6);
+}
+
+.box-text:hover{
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  }
+
+.box-text:first-child{
+    background-color: rgba(0, 0, 0, 0.377);
+}
+
+.box-text:nth-child(2){
+    background-color: rgba(100, 7, 7, 0.377);
+}
+
+.box-text:nth-child(3){
+    background-color: rgba(32, 86, 161, 0.377);
+}
+
+.box-text:last-child{
+    background-color: rgba(0, 0, 0, 0.377);
+}
+
+.s2_title{
+    font-size: 3vh;
+    font-style: normal;
+    text-align: center;
+    font-family: 'Lora', serif; 
+    text-decoration: underline;
+}
+
+.s2_p{
+    font-size: 2.5vh;
+    font-weight: lighter;
+    text-align: center; 
+    font-family: Candara;
+}
+
+
+/*Desbloquea tus habilidades*/
+.section3{
+    position: relative;
+    margin: 0%;
+    bottom: 0;
+    display: block;
+}
+
+.boxcontainer3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+    padding-top: 2%;
+    height: 100vh; 
+    background-size: cover; 
+    background-image: url('imagenes/sec3fondo.jpg');
+}
+
+.box3_text{
+    background-color: salmon;
 
 }
+
+.box3_img{
+    padding-top: 30%;
+    background-color: springgreen;
+}
+
+.box3_cards{
+    width: 30%;
+    height: 30%;
+    padding: 2%;  
+    border: 1px solid rgba(119, 79, 34, 0.6);
+}
+
 
 /*BLOQUE 4 GALERIA GAMPEONES*/
 .contenedor{
