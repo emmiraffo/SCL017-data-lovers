@@ -105,7 +105,7 @@ video{
 .box-text:hover{
     transform: scale(1.05);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
-  }
+}
 
 .box-text:first-child{
     background-color: rgba(0, 0, 0, 0.377);
@@ -149,9 +149,11 @@ video{
 
 .boxcontainer3{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     flex-flow: wrap;
+    flex-wrap: wrap;
+    align-items: flex-end;
     padding-top: 2%;
     height: 100vh; 
     background-size: cover; 
@@ -159,21 +161,69 @@ video{
 }
 
 .box3_text{
-    background-color: salmon;
-
-}
-
-.box3_img{
-    padding-top: 30%;
-    background-color: springgreen;
+    display: flex;
+    justify-content: space-between;
+    height: 45%;
+    width: 100%;
+    padding: 2%;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .box3_cards{
-    width: 30%;
-    height: 30%;
+    width: 20%;
+    height: 70%;
     padding: 2%;  
-    border: 1px solid rgba(119, 79, 34, 0.6);
+    border: 2px solid rgba(43, 43, 43, 0.459);
 }
+
+.box3_cards:hover{
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+.box3_cards:first-child{
+    background-color: rgba(158, 29, 29, 0.671);
+}
+
+.box3_cards:nth-child(2){
+    background-color: rgba(33, 136, 33, 0.671);
+}
+
+.box3_cards:nth-child(3){
+    background-color: rgba(30, 69, 128, 0.671);
+}
+
+.box3_cards:last-child{
+    background-color: rgba(145, 81, 9, 0.671);
+}
+
+.cards_title{
+    font-size: 3vh;
+    font-style: normal;
+    text-align: center;
+    font-family: 'Lora', serif; 
+    text-decoration: underline;
+}
+
+.cards_p{
+    font-size: 2.3vh;
+    font-weight: lighter;
+    text-align: center; 
+    font-family: Candara;
+}
+
+.box3_img{
+    height: 25%;
+    margin-bottom: 5%;
+}
+
+.barratutorial{
+    height: 27vh;
+    width: 105vh;
+}
+
 
 
 /*BLOQUE 4 GALERIA GAMPEONES*/
