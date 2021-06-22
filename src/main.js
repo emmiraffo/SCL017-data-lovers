@@ -99,3 +99,15 @@ function limpiarFiltros (){
     limpiarLista ()
     dibujarHeroes (list)
 }
+
+const searchbar = document.getElementById('searchbox');
+
+searchbar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+    const searched = list.filter((character) => {
+        return (character.name.toLowerCase().includes(searchString));
+    });
+    limpiarLista()
+    dibujarHeroes(searched)
+  console.log(searched)
+});

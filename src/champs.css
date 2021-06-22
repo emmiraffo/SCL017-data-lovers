@@ -71,7 +71,7 @@
   position: relative;
   border: 2px solid #daa520;
 	outline: none;
-	color: #00000;
+	color: #000;
   text-align: center;
   width: 100%;
   height: 30px;
@@ -88,12 +88,12 @@
   color: #b6b4b4;
   text-align:right;
   margin-right: 5%;
-  
 }
+
 .clear:hover{
   color: darkgoldenrod;
-  
 }
+
 /*Botón de roles*/
 .dButton{
   position: relative;
