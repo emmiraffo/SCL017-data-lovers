@@ -1,6 +1,14 @@
-function dropdown() {
-  document.getElementById("dContent").classList.toggle("show");
-};
+function dropdownTags() {
+  document.getElementById("listRoles").classList.toggle("show");
+}
+function dropdownPower() {
+  document.getElementById("listPower").classList.toggle("show");
+}
+function dropdownDifficulty() {
+  document.getElementById("listDifficulty").classList.toggle("show");
+}
 
 
-export{dropdown};
+export{dropdownTags};
+export{dropdownPower};
+export{dropdownDifficulty};

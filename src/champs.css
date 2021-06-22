@@ -24,15 +24,16 @@
   background: #170e46;
   padding: 30px 0px;
   position: fixed;
+  overflow-y: auto;
 }
 
 .sidebar_text{
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 0px;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: lighter;
-  color:#8f7318
+  color:#b3871f
 }
 
 .sidebar ul li{
@@ -47,11 +48,12 @@
 }
 
 /*Caja con número de campeones*/
+
 .numC{
   position: relative;
-  border: 2px solid #b48f2a;
+  border: 2px solid #daa520;
   text-align: center;
-	color: #8f7318;
+	color: #b3871f;
   width: 100%;
   height: 100%;
   padding-top: 10px;
@@ -67,25 +69,35 @@
 /*Barra de búsqueda*/
 .searchbox{
   position: relative;
-  border: 2px solid #b48f2a;
+  border: 2px solid #daa520;
 	outline: none;
-	color: #000000;
+	color: #000;
   text-align: center;
   width: 100%;
   height: 30px;
   padding-left: 5px;
   font-family: 'Lora', serif;
-  background-image: url('img/sicon.png');
+  background-image: url('imagenes/sicon.png');
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: left center;
   background-origin: content-box;
 }
 
+.clear{
+  color: #b6b4b4;
+  text-align:right;
+  margin-right: 5%;
+}
+
+.clear:hover{
+  color: darkgoldenrod;
+}
+
 /*Botón de roles*/
 .dButton{
   position: relative;
-  border: 2px solid #b48f2a;
+  border: 2px solid #daa520;
 	outline: none;
   text-align: center;
 	color: #000000;
