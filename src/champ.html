@@ -7,7 +7,6 @@
     <link rel="shotcut icon" href="imagenes/favicon.ico" type="image/x-icon">
   </head>
   <body>
-
  <div id ="cPage" class="cPage"> 
     <div class="sidebar">
       <ul>
@@ -18,13 +17,15 @@
               <p class="sidebar_text">Total de Campeones</p>
             </div>
           </li>
+          
           <li><input type="text" id="searchbox" placeholder="B U S C A R" class="searchbox"></li>
           <br>
           <p class="sidebar_text">filtrar por</p>
-          <li>  
-            <div id="dropdown" class="dropdown">
-              <button id="dButton" class="dButton">R O L E S </button>
-                <div id="dContent" class="dContent">
+          <p id="clearFilter" class="clear"> Limpiar Filtros </p>
+          <li>      
+            <div id="dropdownRoles" class="dropdown">  <!-- filtro para Roles-->
+              <button id="buttonT" class="dButton">R O L E S </button>
+                <div id="listRoles" class="dContent">
                   <a data-tags="Assassin" class="rol" href="#"><p>Asesino</p></a>
                   <a data-tags="Fighter" class="rol" href="#"><p>Luchador</p></a>
                   <a data-tags="Mage" class="rol" href="#"><p>Mago</p></a>
@@ -32,18 +33,44 @@
                   <a data-tags="Support" class="rol" href="#"><p>Soporte</p></a>
                   <a data-tags="Tank" class="rol" href="#"><p>Tanque</p></a>
                 </div>
+              </div>   
+            <div id="dropdownPower" class="dropdown"> <!-- filtro para fuente poder-->
+              <button id="buttonP" class="dButton">F U E N T E  DE  P O D E R </button>
+                <div id="listPower" class="dContent">
+                  <a data-power="Ferocity"  class="power" href="#"><p>Ferocidad</p></a>
+                  <a data-power="BloodWell" class="power" href="#"><p>Pozo de Sangre</p></a>
+                  <a data-power="MP"class="power" href="#"><p>Maná Power</p></a>
+                  <a data-power="Energy" class="power" href="#"><p>Energía</p></a>
+                  <a data-power= "Heat"class="power" href="#">Calor<p></p></a>
+                  <a data-power="None" class="power" href="#"><p>Ninguna</p></a>
+                  <a data-power="Gnarfury" class="power" href="#"><p>Furia Gnar</p></a>
+                  <a data-power="Rage" class="power" href="#"><p>Furia</p></a>
+                  <a data-power="Battlefury" class="power" href="#"><p>Furia de Batalla</p></a>
+                  <a data-power="Dragonfury" class="power" href="#"><p>Furia de Dragón</p></a>
+                  <a data-power="Wind" class="power" href="#"><p>Viento</p></a>
+                </div>
+              </div>
+                <div id="dropdownDifficulty" class="dropdown"> <!-- filtro para dificultad-->
+                  <button id="buttonD" class="dButton"> D I F I C U L T A D </buttonD>
+                    <div id="listDifficulty" class="dContent">
+                      <a data-difficulty="1" class="dificultad" href="#"><p> 1 </p></a>
+                      <a data-difficulty="2" class="dificultad" href="#"><p> 2 </p></a>
+                      <a data-difficulty="3" class="dificultad" href="#"><p> 3 </p></a>
+                      <a data-difficulty="4" class="dificultad" href="#"><p> 4 </p></a>
+                      <a data-difficulty="5" class="dificultad" href="#"><p> 5 </p></a>
+                      <a data-difficulty="6" class="dificultad" href="#"><p> 6 </p></a>
+                      <a data-difficulty="7" class="dificultad" href="#"><p> 7 </p></a>
+                      <a data-difficulty="8" class="dificultad" href="#"><p> 8 </p></a>
+                      <a data-difficulty="9" class="dificultad" href="#"><p> 9 </p></a>
+                    </div>
+                  </div>
+                  
             </div>
           </li>
       </ul>  
     </div>
-
     <div id="container" class="container"> </div>
  </div>     
-    
-    
-    
-    
-    
     
     
     <script src="main.js" type="module"></script>
