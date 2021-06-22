@@ -10,33 +10,52 @@ const button = document.getElementById("dButton");
 
 const container = document.getElementById('container');
 const list = Object.values(data.data);
-for (let i=0; i < list.length; i++){
 
-    const champCard = document.createElement('div');
-    champCard.classList.add('champCard');
+function dibujarHeroes(list) {
+    for (let i=0; i < list.length; i++){
 
-    const name = document.createElement('p');
-    name.classList.add('name');
-    name.textContent = list[i].name;
-
-    const title = document.createElement('p');
-    title.classList.add('title')
-    title.textContent = list[i].title;
-
-    const img = document.createElement('img');
-    img.src = list[i].img; 
-    img.classList.add('photos');
+        const champCard = document.createElement('div');
+        champCard.classList.add('champCard');
+    
+        const name = document.createElement('p');
+        name.classList.add('name');
+        name.textContent = list[i].name;
+    
+        const title = document.createElement('p');
+        title.classList.add('title')
+        title.textContent = list[i].title;
+    
+        const img = document.createElement('img');
+        img.src = list[i].img; 
+        img.classList.add('photos');
+    
+        
+        champCard.appendChild(img);
+        champCard.appendChild(name);
+        champCard.appendChild(title);
+       
+    
+        container.appendChild(champCard);
+    }
+}
+    dibujarHeroes(list)
 
     
-    champCard.appendChild(img);
-    champCard.appendChild(name);
-    champCard.appendChild(title);
-   
+function limpiarLista() {
+    while(container.hasChildNodes())
+    container.removeChild(container.firstChild);
+}
 
-    container.appendChild(champCard);
+const searchbar = document.getElementById('searchbox');
 
-};
+searchbar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+    const searched = list.filter((character) => {
+        return (character.name.toLowerCase().includes(searchString));
+    });
+    limpiarLista()
+    dibujarHeroes(searched)
+  console.log(searched)
+});
 
-
-
-
+  
