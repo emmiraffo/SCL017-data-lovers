@@ -1,18 +1,19 @@
-import { example, anotherExample } from '../src/data.js';
+import filtrarPorRoles from '../src/main'; 
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+
+describe('filtrarPorRoles', () => {
+  it('is an array', () => {
+    expect(typeof filtrarPorRoles).toBe('array');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns true', () => {
+    expect(filtrarPorRoles()).toBe('true');
   });
 });
 
 
-describe('anotherExample', () => {
+/*describe('anotherExample', () => {
   it('is a function', () => {
     expect(typeof anotherExample).toBe('function');
   });
@@ -20,4 +21,4 @@ describe('anotherExample', () => {
   it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
   });
-});
+});*/

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/*Página Total*/
+.cPage {
+  display: flex;
+  position:relative;
+  background-color: #cfcfcf;
+  justify-content:start;
+  font-family: 'Lora', serif;
+}
+
+/*Barra lateral*/
+.sidebar{
+  width: 20%;
+  height: 100%;
+  background: #170e46;
+  padding: 30px 0px;
+  position: fixed;
+  overflow-y: auto;
+}
+
+.sidebar_text{
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  font-size: 20px;
+  font-weight: lighter;
+  color:#b3871f
+}
+
+.sidebar ul li{
+  padding: 15px;
+}   
+
+/*Logo*/
+.sidelogo{
+  width: 100%;
+  height: 100%;
+  padding-left: 5px;
+}
+
+/*Caja con número de campeones*/
+
+.numC{
+  position: relative;
+  border: 2px solid #daa520;
+  text-align: center;
+	color: #b3871f;
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-family: 'Lora', serif;
+}
+
+.numC .numC_bigNum{
+  font-size: 45px;
+  font-weight: normal;
+}
+
+/*Barra de búsqueda*/
+.searchbox{
+  position: relative;
+  border: 2px solid #daa520;
+	outline: none;
+	color: #000;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  padding-left: 5px;
+  font-family: 'Lora', serif;
+  background-image: url('imagenes/sicon.png');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: left center;
+  background-origin: content-box;
+}
+
+.clear{
+  color: #b6b4b4;
+  text-align:right;
+  margin-right: 5%;
+}
+
+.clear:hover{
+  color: darkgoldenrod;
+}
+
+/*Botón de roles*/
+.dButton{
+  position: relative;
+  border: 2px solid #daa520;
+	outline: none;
+  text-align: center;
+	color: #000000;
+  width: 100%;
+  height: 30px;
+  padding-left: 5px;
+  font-family: 'Lora', serif;
+} 
+
+.dButton:hover{
+  background-color: #9eb9ca;
+}
+
+.dContent{
+  display: none;
+  position: relative;
+  background-color: #f6f6f6;
+  min-width: 100%;
+  overflow: auto;
+  border: 2px solid rgb(236, 207, 207);
+  z-index: 1;
+}
+
+.dContent a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Lora', serif;
+}
+
+.dContent a:hover{
+  background-color: rgb(199, 199, 199);
+}
+
+.show{
+  display: block;
+}
+
+/*Contenedor de tarjetas*/
+.container{
+  display: flex;	
+  flex-wrap: wrap;
+	align-items: space-between;
+  margin-left: 25%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-right: 0%;
+}
+
+/*Tarjetas de campeones*/
+.champCard{
+	background-color: #eee;
+	margin: 20px;
+	padding: 2px;
+	align-items: flex-start;
+  text-align: center;
+}
+
+.champCard:hover{
+  background-color: rgb(114, 96, 96);
+}
+
+.photos{
+  height: 231.175px;
+  width: 204.762px;
+  object-fit: cover;
+}
+
+.name{
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.title{
+  margin-top: 2px;
+  margin-bottom: 5px;
+  font-weight: lighter;
+  font-size: 75%;
+  text-transform: uppercase;
+}
