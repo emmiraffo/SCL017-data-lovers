@@ -1,22 +1,19 @@
-import filtrarPorRoles from '../src/main'; 
+import { dropdownTags, dropdownPower, dropdownDifficulty } from '../src/data.js';
 
-describe('filtrarPorRoles', () => {
-  it('is an array', () => {
-    expect(typeof filtrarPorRoles).toBe('object');
-  });
-
-  it('returns true', () => {
-    expect(filtrarPorRoles()).toBe('true');
+describe('dropdown Tags', () => {
+  it('is a function', () => {
+    expect(typeof dropdownTags).toBe('function');
   });
 });
 
-
-/*describe('anotherExample', () => {
+describe('dropdown Power', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof dropdownPower).toBe('function');
   });
+});
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+describe('dropdown Difficulty', () => {
+  it('is a function', () => {
+    expect(typeof dropdownDifficulty).toBe('function');
   });
-});*/
+});
