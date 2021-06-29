@@ -9,6 +9,4 @@ function dropdownDifficulty() {
 }
 
 
-export{dropdownTags};
-export{dropdownPower};
-export{dropdownDifficulty};
+export{dropdownTags, dropdownPower, dropdownDifficulty};

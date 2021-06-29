@@ -5,101 +5,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 *{
-    margin: 0%;
-    padding: 0%;
+    margin: 0px;
+    padding: 0px;
 }
 
-/*Página completa*/
-.container{
-    font-family:Crimson Text;
-    background: rgb(1, 22, 22);
+
+body{
+    background: rgb(2, 37, 37);
     line-height: 1.3; 
     display: flex;
     color: floralwhite;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
-h1{
-    font-size: 6vh;
-    margin-bottom: 0;
-    font-weight: bold;
-    font-style: normal;
-    font-family: 'Lora', serif; 
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.549);   
-    text-align: center; 
- }
-
-p {
+.section{ 
+    position: relative;
     display: block;
-    margin-bottom: 0;  
-    text-align: center;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.549);
-    font-size: 3vh;
+    height: 100vh;
+    min-width: 250px;
 }
 
 
 /*¿Qué es League of Legends?*/
-.section1{
-    position: relative;
-    top: 0%;
-    left: 0%;
-    margin: 0%;
-    bottom: 0%;
-    display: block;
-}
-
-.boxcontainer{
-    display: flex;
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0;
+.section:first-child{
+    background-color: #16f58d;
     align-items: center;
     justify-content: center;
-}
-
-video{
-    min-width: 100%;
-    min-height: 100%;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    filter: brightness(50%);
+    background-image: url('imagenes/champeons2.jpg');
+    background-size: cover; 
 }
 
 .section1_text{
+    background-color: rgba(188, 143, 143, 0.877);
     text-align: center;
-    z-index: 1;
-    position: absolute;
-    padding: 20%;
+    padding: 10%;
+    margin: 10%;
 }
 
+.section1_text h1{
+    font-size: 5vh;
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'Lora', serif; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.549);
+}
 
+.section1_text p{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.549);
+    font-size: 2.6vh;
+}
 
 /*¿Cómo jugar League of Legends?*/
-.section2{
-    position: relative;
-    padding-top: 3%;
-    margin: 0%;
-    bottom: 0;
-    display: block;
+.section:nth-child(2){
+    background-color: rgb(7, 27, 15);
+    background-size: cover; 
+    background-image: url('imagenes/base.png');
+    padding-top: 2%;
+    text-align: center;
+}
+
+.section:nth-child(2) h1{
+    font-size: 6vh;
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'Lora', serif; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.549);
 }
 
 .boxcontainer2{
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
-    flex-flow: wrap;
-    padding-top: 5%;
-    height: 100vh; 
-    background-size: cover; 
-    background-image: url('imagenes/base.png');
+    flex-wrap: wrap;
+    grid-gap: 1vh;
+    margin-top: 3%;
 }
 
 .box-text{ 
-    width: 30%;
-    height: 30%;
-    padding: 2%;  
+    width: 49vh;
+    height: 24vh;
+    padding-top: 2%; 
+    padding-bottom: 4%;
+    padding-left: 3%;
+    padding-right: 3%;
     border: 1px solid rgba(119, 79, 34, 0.6);
+    text-align: center;
+}
+
+.box-text h2{
+    font-size: 3vh;
+    font-style: normal;
+    font-family: 'Lora', serif; 
+    text-decoration: underline;
+}
+
+.box-text p{
+    font-size: 2.3vh;
+    font-weight: lighter;
+    font-family: Candara;
 }
 
 .box-text:hover{
@@ -108,63 +111,44 @@ video{
 }
 
 .box-text:first-child{
-    background-color: rgba(0, 0, 0, 0.377);
+    background-color: rgba(0, 0, 0, 0.623);
 }
 
 .box-text:nth-child(2){
-    background-color: rgba(100, 7, 7, 0.377);
+    background-color: rgba(100, 7, 7, 0.623);
 }
 
 .box-text:nth-child(3){
-    background-color: rgba(32, 86, 161, 0.377);
+    background-color: rgba(32, 86, 161, 0.623);
 }
 
 .box-text:last-child{
-    background-color: rgba(0, 0, 0, 0.377);
+    background-color: rgba(0, 0, 0, 0.623);
 }
 
-.s2_title{
-    font-size: 3vh;
-    font-style: normal;
-    text-align: center;
-    font-family: 'Lora', serif; 
-    text-decoration: underline;
-}
-
-.s2_p{
-    font-size: 2.5vh;
-    font-weight: lighter;
-    text-align: center; 
-    font-family: Candara;
-}
 
 
 /*Desbloquea tus habilidades*/
-.section3{
-    position: relative;
-    margin: 0%;
-    bottom: 0;
-    display: block;
-}
-
-.boxcontainer3{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    flex-flow: wrap;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    padding-top: 2%;
-    height: 100vh; 
+.section:nth-child(3){
+    background-color: chocolate;
     background-size: cover; 
     background-image: url('imagenes/sec3fondo.jpg');
+    padding-top: 1%;
+    text-align: center;
+}
+
+.section:nth-child(3) h1{
+    font-size: 6vh;
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'Lora', serif; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.549);
 }
 
 .box3_text{
     display: flex;
-    justify-content: space-between;
-    height: 45%;
-    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     padding: 2%;
     margin-top: 2%;
     margin-left: 2%;
@@ -172,8 +156,8 @@ video{
 }
 
 .box3_cards{
-    width: 20%;
-    height: 70%;
+    width: 30vh;
+    height: 35vh;
     padding: 2%;  
     border: 2px solid rgba(43, 43, 43, 0.459);
 }
@@ -195,11 +179,11 @@ video{
     background-color: rgba(30, 69, 128, 0.671);
 }
 
-.box3_cards:last-child{
+.box3_cards:nth-child(4){
     background-color: rgba(145, 81, 9, 0.671);
 }
 
-.cards_title{
+.box3_cards h2{
     font-size: 3vh;
     font-style: normal;
     text-align: center;
@@ -207,7 +191,7 @@ video{
     text-decoration: underline;
 }
 
-.cards_p{
+.box3_cards p{
     font-size: 2.3vh;
     font-weight: lighter;
     text-align: center; 
@@ -215,44 +199,44 @@ video{
 }
 
 .box3_img{
-    height: 25%;
-    margin-bottom: 5%;
+    height: 27vh;
+    width: 107vh;
+    margin-top: 2%;
+    background-color: rgba(0, 0, 0, 0.39)
 }
 
 .barratutorial{
     height: 27vh;
-    width: 105vh;
 }
 
 
 
 /*Campeones*/
-.section4{
-    position: relative;
-    margin: 0%;
-    bottom: 0;
-    display: block;
+.section:nth-child(4){
+    background-color: crimson;
+    background-size: cover; 
+    background-image: url('imagenes/champeons3.jpg');
+    padding-top: 2%;
+    text-align: center;
+}
+
+.section:nth-child(4) h1{
+    font-size: 6vh;
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'Lora', serif; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.549);
 }
 
 .boxcontainer4{
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
-    flex-flow: wrap;
     flex-wrap: wrap;
-    align-items: flex-start;
-    padding-top: 2%;
-    height: 100vh; 
-    background-size: cover; 
-    background-image: url('imagenes/champeons3.jpg');
-}
-
-.gallery{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    flex-flow: wrap;
-    flex-wrap: wrap;
+    padding: 1%;
+    padding-top: 8%;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 .wrapper{
@@ -323,6 +307,7 @@ video{
 
 .fbutton{
     align-items: center;
+    padding-top: 7%;
 }
   
 .botonesinicio{
@@ -345,4 +330,203 @@ video{
 .btn a:hover {
     background: #F5AA16;
     color: rgba(35, 49, 43, 0.8);
+}
+
+
+/*Query Ipads*/
+@media only screen and (min-width: 377px) and (max-width: 770px){
+
+.section{
+    height: 110vh;
+}
+
+.section:first-child{
+    background-image: url('imagenes/w2.jpg');
+}
+
+.section1_text p{
+    font-size: 2.9vh;
+}
+
+.section:nth-child(2){
+    background-image: url('imagenes/map2.png');
+}
+
+
+.section:nth-child(2) h1{
+    font-size: 4vh;
+}
+
+.box-text{ 
+    width: 65vh;
+    height: 22vh;
+    padding-bottom: 0%;
+}
+    
+.box-text h2{
+    font-size: 2vh;
+}
+
+.box-text p{
+    font-size: 2.1vh;
+}
+
+.box-text:nth-child(2){
+    background-color: rgba(0, 0, 0, 0.623);
+}
+
+.box-text:nth-child(3){
+    background-color: rgba(0, 0, 0, 0.623);
+}
+
+.section:nth-child(3) h1{
+    font-size: 4vh;
+}
+
+.box3_cards{
+    width: 30vh;
+    height: 32vh;
+    padding: 2%;  
+}
+
+.box3_cards h2{
+    font-size: 2vh;
+}
+
+.box3_img{
+    height: 22vh;
+    width: 87vh;
+}
+    
+.barratutorial{
+    height: 22vh;
+}
+
+.section:nth-child(4){ 
+    background-image: url('imagenes/champs2.jpg');
+}
+
+.section:nth-child(4) h1{
+    font-size: 4vh;
+}
+
+.boxcontainer4{
+    padding-top: 5%;
+    grid-gap: 1.2vh;
+}
+
+.wrapper{
+    height: 30vh;
+    width: 27vh;
+  }
+
+.fbutton{
+    padding-top: 9%;
+}
+}
+
+
+/*Query celulares*/
+@media only screen and (max-width: 376px){
+
+.section{
+    height: 155vh;
+ }
+    
+.section:first-child{
+    background-image: url('imagenes/w2.jpg');
+}
+    
+.section1_text h1{
+    font-size: 7vh;
+}
+
+.section1_text p{
+    font-size: 4.9vh;
+}
+    
+.section:nth-child(2){
+    background-image: url('imagenes/map2.png');
+}
+    
+.section:nth-child(2) h1{
+    font-size: 4.5vh;
+}
+    
+.box-text{ 
+    width: 65vh;
+    height: 33vh;
+    padding-bottom: 0%;
+}
+        
+.box-text h2{
+    font-size: 4vh;
+}
+    
+.box-text p{
+    font-size: 2.8vh;
+}
+    
+.box-text:nth-child(2){
+    background-color: rgba(0, 0, 0, 0.623);
+}
+    
+.box-text:nth-child(3){
+    background-color: rgba(0, 0, 0, 0.623);
+}
+    
+.section:nth-child(3) h1{
+    font-size: 4.5vh;
+}
+    
+.box3_cards{
+    width: 30vh;
+    height: 50vh;
+    padding: 2%;  
+}
+    
+.box3_cards h2{
+    font-size: 4vh;
+}
+    
+.box3_cards p{
+    font-size: 2.8vh;
+}
+
+.box3_img{
+    height: 22vh;
+    width: 87vh;
+}
+        
+.barratutorial{
+    height: 22vh;
+}
+    
+.section:nth-child(4){ 
+    background-image: url('imagenes/champs2.jpg');
+}
+    
+.section:nth-child(4) h1{
+    font-size: 4.5vh;
+}
+    
+.boxcontainer4{
+    padding-top: 5%;
+    grid-gap: 1.2vh;
+}
+    
+.wrapper{
+    height: 37vh;
+    width: 29vh;
+}
+    
+.fbutton{
+    padding-top: 9%;
+}
+
+.botonesinicio{
+    width: 35vh;
+    height: 8vh;
+    font-size: 2.8vh;
+}
 }
