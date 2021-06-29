@@ -1,10 +1,8 @@
 import filtrarPorRoles from '../src/main'; 
 
-
-
 describe('filtrarPorRoles', () => {
   it('is an array', () => {
-    expect(typeof filtrarPorRoles).toBe('array');
+    expect(typeof filtrarPorRoles).toBe('object');
   });
 
   it('returns true', () => {

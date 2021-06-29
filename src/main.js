@@ -1,8 +1,7 @@
 import data from './data/lol/lol.js';
 
-import {dropdownTags} from './data.js';
-import {dropdownPower} from './data.js';
-import {dropdownDifficulty} from './data.js';
+import {dropdownTags, dropdownPower, dropdownDifficulty} from './data.js';
+
 
 
 const container = document.getElementById('container');
