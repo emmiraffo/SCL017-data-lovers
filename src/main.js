@@ -13,7 +13,6 @@ function limpiarLista() {
 }
 
 
-
 function filtrarPorDifficultad (event) {
     var filterDifficulty= event.currentTarget.dataset.difficulty
     const difficultyList = list.filter(elementoArray => elementoArray.info.difficulty == filterDifficulty);
@@ -42,7 +41,7 @@ function dibujarHeroes(list) {
 
         const enlaceChampion = document.createElement('a');
         enlaceChampion.classList.add('enlace');
-        enlaceChampion.setAttribute("href","champion?name=" + list[i].name);
+        enlaceChampion.setAttribute("href","champion?id=" + list[i].id);
         
         champCard.appendChild(img);
         champCard.appendChild(name);
@@ -58,9 +57,6 @@ function limpiarFiltros (){
     limpiarLista ()
     dibujarHeroes (list)
 }
-
-
-
 
 //listeners
 const buttonTags = document.getElementById("buttonT");
@@ -86,7 +82,7 @@ document.querySelectorAll(".partype").forEach(function(element) {
         let listaFiltrada = filtrarPorPoder(event.currentTarget.dataset.partype, list);
         limpiarLista();
         dibujarHeroes(listaFiltrada);
-        console.log(event.currentTarget.dataset.partype);
+
     })
 }); 
     
