@@ -31,7 +31,7 @@
 
 ![img](imagenes/pt2.jpg)|![img](imagenes/pt2.jpg)
 
-<img src="imagenes/pt1.png" width="150px"/>
+<img src="https://github.com/emmiraffo/SCL017-data-lovers/blob/master/src/imagenes/pt1.jpg" width="150px"/>
 
 |<img src="imagenes/pt1.png" width="150px"/>|<img src="imagenes/pt1.png" width="150px"/>|
 
