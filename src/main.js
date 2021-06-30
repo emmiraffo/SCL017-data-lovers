@@ -1,8 +1,8 @@
 import data from './data/lol/lol.js';
-
 import {dropdownTags, dropdownPower, dropdownDifficulty} from './data.js';
 
-import { filtrarPorDifficultad, filtrarPorRoles } from './hero.js';
+import { filtrarPorRoles, filtrarPorPoder , filtrarPorDifficultad, barraBuscadora} from './hero.js';
+
 
 
 const container = document.getElementById('container');
@@ -14,12 +14,7 @@ function limpiarLista() {
         container.removeChild(container.firstChild);
 }
 
-function filtrarPorPoder(event) {
-    var filterPower = event.currentTarget.dataset.power
-    const powerList = list.filter(elementoArray => elementoArray.partype == filterPower);
-    limpiarLista();
-    dibujarHeroes(powerList)
-}
+
 
 /*function filtrarPorDifficultad (event) {
     var filterDifficulty= event.currentTarget.dataset.difficulty
@@ -66,16 +61,7 @@ function limpiarFiltros (){
     dibujarHeroes (list)
 }
 
-const searchbar = document.getElementById('searchbox');
 
-searchbar.addEventListener('keyup', (e) => {
-    const searchString = e.target.value.toLowerCase();
-    const searched = list.filter((character) => {
-        return (character.name.toLowerCase().includes(searchString));
-    });
-    limpiarLista()
-    dibujarHeroes(searched)
-});
 
 
 //listeners
@@ -112,9 +98,16 @@ const buttonPower = document.getElementById("buttonP");
 buttonPower.addEventListener("click", ()=>{
     dropdownPower()
 });
-document.querySelectorAll(".power").forEach(function(element) {
-    element.addEventListener("click", filtrarPorPoder)
+
+document.querySelectorAll(".partype").forEach(function(element) {
+    element.addEventListener("click", (event) => {
+        let listaFiltrada = filtrarPorPoder(event.currentTarget.dataset.partype, list);
+        limpiarLista();
+        dibujarHeroes(listaFiltrada);
+        console.log(event.currentTarget.dataset.partype);
+    })
 }); 
+    
 
 
 
@@ -122,9 +115,18 @@ document.querySelectorAll(".power").forEach(function(element) {
     element.addEventListener("click", filtrarPorDifficultad)
 });*/ 
 
+const searchbar = document.getElementById('searchbox');
+searchbar.addEventListener('keyup', (e) => {
+    let search = barraBuscadora ( e.target.value.toLowerCase()  , list);
+    limpiarLista();
+    dibujarHeroes(search);
+    })
+
+
 const limpiadorFiltros = document.getElementById("clearFilter");
     limpiadorFiltros.addEventListener("click",  ()=>{
         limpiarFiltros()
     });
+
 //FinListeners
 
