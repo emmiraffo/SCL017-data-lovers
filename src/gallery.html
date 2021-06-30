@@ -8,24 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   
-  <body>
- <div id ="cPage" class="cPage"> 
-    <div class="sidebar">
-      <ul>
-          <li><img src="imagenes/sidelogo.png" class="sidelogo"></li>
-          <li>
-            <div class="numC"> 
-              <p class="numC_bigNum">1 3 3</p>
-              <p class="sidebar_text">Total de Campeones</p>
-            </div>
+  <body> 
+
+  <div class="wrapper">
+
+    <input type="checkbox" id="btn" hidden>
+    <label for="btn" class="menu-btn">
+      <span> </span>
+      <span> </span>
+      <span> </span>
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-times"></i>
+    </label>
+
+    <nav id="sidebar">
+      <div class="sideTitle">
+        <img src="imagenes/sidelogo.png" class="sidelogo">
+       </div>
+
+       <ul class="list-items">
+          <li><div class="numC"> 
+            <h3>1 3 4</h3>
+            <p>Total de Campeones</p>
+          </div>
           </li>
-          
           <li><input type="text" id="searchbox" placeholder="B U S C A R" class="searchbox"></li>
-          <br>
-          <p class="sidebar_text">filtrar por</p>
-          <p id="clearFilter" class="clear"> Limpiar Filtros </p>
-          <li>      
-            <div id="dropdownRoles" class="dropdown">  <!-- filtro para Roles-->
+          <li><p class="sidebar_text">filtrar por</p></li>
+          <li><p id="clearFilter" class="clear"> Limpiar Filtros </p></li>
+          <li>
+              
               <button id="buttonT" class="dButton">R O L E S </button>
                 <div id="listRoles" class="dContent">
                   <a data-tags="Assassin" class="rol" href="#"><p>Asesino</p></a>
@@ -35,9 +46,10 @@
                   <a data-tags="Support" class="rol" href="#"><p>Soporte</p></a>
                   <a data-tags="Tank" class="rol" href="#"><p>Tanque</p></a>
                 </div>
-              </div>   
-            <div id="dropdownPower" class="dropdown"> <!-- filtro para fuente poder-->
-              <button id="buttonP" class="dButton">F U E N T E  DE  P O D E R </button>
+          </li>   
+          <li>
+            <div id="dropdownPower" class="dropdown"> 
+              <button id="buttonP" class="dButton">FUENTE DE PODER </button>
                 <div id="listPower" class="dContent">
                   <a data-partype="Ferocity"  class="partype" href="#"><p>Ferocidad</p></a>
                   <a data-partype="BloodWell" class="partype" href="#"><p>Pozo de Sangre</p></a>
@@ -51,26 +63,30 @@
                   <a data-partype="Dragonfury" class="partype" href="#"><p>Furia de Dragón</p></a>
                   <a data-partype="Wind" class="partype" href="#"><p>Viento</p></a>
                 </div>
-              </div>
-                <div id="dropdownDifficulty" class="dropdown"> <!-- filtro para dificultad-->
+            </div>
+          </li>
+          <li>
+                <div id="dropdownDifficulty" class="dropdown"> 
                   <button id="buttonD" class="dButton"> D I F I C U L T A D </button>
                     <div id="listDifficulty" class="dContent">
-                      <a data-difficulty="1" class="dificultad" href="#"><p> 1 </p></a>
-                      <a data-difficulty="2" class="dificultad" href="#"><p> 2 </p></a>
-                      <a data-difficulty="3" class="dificultad" href="#"><p> 3 </p></a>
-                      <a data-difficulty="4" class="dificultad" href="#"><p> 4 </p></a>
-                      <a data-difficulty="5" class="dificultad" href="#"><p> 5 </p></a>
-                      <a data-difficulty="6" class="dificultad" href="#"><p> 6 </p></a>
-                      <a data-difficulty="7" class="dificultad" href="#"><p> 7 </p></a>
-                      <a data-difficulty="8" class="dificultad" href="#"><p> 8 </p></a>
-                      <a data-difficulty="9" class="dificultad" href="#"><p> 9 </p></a>
+                      <a data-difficulty="1" class="difficulty" href="#"><p> 1 </p></a>
+                      <a data-difficulty="2" class="difficulty" href="#"><p> 2 </p></a>
+                      <a data-difficulty="3" class="difficulty" href="#"><p> 3 </p></a>
+                      <a data-difficulty="4" class="difficulty" href="#"><p> 4 </p></a>
+                      <a data-difficulty="5" class="difficulty" href="#"><p> 5 </p></a>
+                      <a data-difficulty="6" class="difficulty" href="#"><p> 6 </p></a>
+                      <a data-difficulty="7" class="difficulty" href="#"><p> 7 </p></a>
+                      <a data-difficulty="8" class="difficulty" href="#"><p> 8 </p></a>
+                      <a data-difficulty="9" class="difficulty" href="#"><p> 9 </p></a>
                     </div>
-                  </div>
+                  </div>   
           </li>
-      </ul>  
-    </div>
-    <div id="container" class="container"> </div>
- </div>     
+       </ul>
+       
+    </nav>
+ </div>
+    
+ <div id="container" class="container"> </div>
     
     
     <script src="main.js" type="module"></script>
