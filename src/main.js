@@ -14,19 +14,6 @@ function limpiarLista() {
         container.removeChild(container.firstChild);
 }
 
-
-<<<<<<< HEAD
-function filtrarPorDifficultad (event) {
-=======
-
-/*function filtrarPorDifficultad (event) {
->>>>>>> c005908e0900036381fe5b3f841785c543b9315a
-    var filterDifficulty= event.currentTarget.dataset.difficulty
-    const difficultyList = list.filter(elementoArray => elementoArray.info.difficulty == filterDifficulty);
-    limpiarLista();
-    dibujarHeroes(difficultyList)
-}*/
-
 function dibujarHeroes(list) {
     
     for (let i=0; i < list.length; i++){
@@ -94,7 +81,6 @@ document.querySelectorAll(".difficulty").forEach(function(element) {
 });
 
 
-
 const buttonPower = document.getElementById("buttonP");
 buttonPower.addEventListener("click", ()=>{
     dropdownPower()
@@ -108,13 +94,6 @@ document.querySelectorAll(".partype").forEach(function(element) {
 
     })
 }); 
-    
-
-
-
-/*document.querySelectorAll(".dificultad").forEach(function(element) {
-    element.addEventListener("click", filtrarPorDifficultad)
-});*/ 
 
 const searchbar = document.getElementById('searchbox');
 searchbar.addEventListener('keyup', (e) => {
