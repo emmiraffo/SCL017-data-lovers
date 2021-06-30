@@ -1,8 +1,8 @@
 import data from './data/lol/lol.js';
-
 import {dropdownTags, dropdownPower, dropdownDifficulty} from './data.js';
 
-import { filtrarPorRoles } from './hero.js';
+import { filtrarPorRoles, filtrarPorPoder , filtrarPorDifficultad, barraBuscadora} from './hero.js';
+
 
 
 const container = document.getElementById('container');
@@ -12,20 +12,6 @@ const list = Object.values(data.data);
 function limpiarLista() {
     while(container.hasChildNodes())
         container.removeChild(container.firstChild);
-}
-
-function filtrarPorPoder(event) {
-    var filterPower = event.currentTarget.dataset.power
-    const powerList = list.filter(elementoArray => elementoArray.partype == filterPower);
-    limpiarLista();
-    dibujarHeroes(powerList)
-}
-
-function filtrarPorDifficultad (event) {
-    var filterDifficulty= event.currentTarget.dataset.difficulty
-    const difficultyList = list.filter(elementoArray => elementoArray.info.difficulty == filterDifficulty);
-    limpiarLista();
-    dibujarHeroes(difficultyList)
 }
 
 function dibujarHeroes(list) {
@@ -49,7 +35,7 @@ function dibujarHeroes(list) {
 
         const enlaceChampion = document.createElement('a');
         enlaceChampion.classList.add('enlace');
-        enlaceChampion.setAttribute("href","champion?name=" + list[i].name);
+        enlaceChampion.setAttribute("href","champion?id=" + list[i].id);
         
         champCard.appendChild(img);
         champCard.appendChild(name);
@@ -66,18 +52,6 @@ function limpiarFiltros (){
     dibujarHeroes (list)
 }
 
-const searchbar = document.getElementById('searchbox');
-
-searchbar.addEventListener('keyup', (e) => {
-    const searchString = e.target.value.toLowerCase();
-    const searched = list.filter((character) => {
-        return (character.name.toLowerCase().includes(searchString));
-    });
-    limpiarLista()
-    dibujarHeroes(searched)
-});
-
-
 //listeners
 const buttonTags = document.getElementById("buttonT");
 buttonTags.addEventListener("click", ()=>{
@@ -92,25 +66,47 @@ document.querySelectorAll(".rol").forEach(function(element) {
     })
 }); 
 
-const buttonPower = document.getElementById("buttonP");
-buttonPower.addEventListener("click", ()=>{
-    dropdownPower()
-});
-document.querySelectorAll(".power").forEach(function(element) {
-    element.addEventListener("click", filtrarPorPoder)
-}); 
 
 const buttonDifficulty = document.getElementById("buttonD");
 buttonDifficulty.addEventListener("click", ()=>{
     dropdownDifficulty()
 });
-document.querySelectorAll(".dificultad").forEach(function(element) {
-    element.addEventListener("click", filtrarPorDifficultad)
+
+document.querySelectorAll(".difficulty").forEach(function(element) {
+    element.addEventListener("click", (event) => {
+        let listaFiltrada = filtrarPorDifficultad(event.currentTarget.dataset.difficulty, list);
+        limpiarLista();
+        dibujarHeroes(listaFiltrada);
+    })
+});
+
+
+const buttonPower = document.getElementById("buttonP");
+buttonPower.addEventListener("click", ()=>{
+    dropdownPower()
+});
+
+document.querySelectorAll(".partype").forEach(function(element) {
+    element.addEventListener("click", (event) => {
+        let listaFiltrada = filtrarPorPoder(event.currentTarget.dataset.partype, list);
+        limpiarLista();
+        dibujarHeroes(listaFiltrada);
+
+    })
 }); 
+
+const searchbar = document.getElementById('searchbox');
+searchbar.addEventListener('keyup', (e) => {
+    let search = barraBuscadora ( e.target.value.toLowerCase()  , list);
+    limpiarLista();
+    dibujarHeroes(search);
+    })
+
 
 const limpiadorFiltros = document.getElementById("clearFilter");
     limpiadorFiltros.addEventListener("click",  ()=>{
         limpiarFiltros()
     });
+
 //FinListeners
 
