@@ -1,4 +1,6 @@
-import { filtrarPorRoles , filtrarPorPoder, barraBuscadora } from '../src/hero.js';
+
+import { filtrarPorRoles , filtrarPorPoder, barraBuscadora , filtrarPorDifficultad} from '../src/hero.js';
+
 
 describe('filtros', () => {
     it('is a function', () => {
@@ -22,6 +24,7 @@ describe('filtros', () => {
 });
 
 
+
 describe('filtro Por Poder', () => {
     it('is a function', () => {
         expect( typeof filtrarPorPoder).toBe('function');
@@ -43,33 +46,26 @@ describe('filtro Por Poder', () => {
 });
 
 
+describe('filtros', () => {
+    it('is a function', () => {
+        expect(typeof filtrarPorDifficultad).toBe('function');
+    });
 
+    it('returns filtered list with one element', () => {
+    let difficulty = '4' ;
+    let list = [{info: {attack: '8', defense: '5', magic: '3', difficulty: '4'}}]
+    let filteredList = filtrarPorDifficultad(difficulty, list);
+     expect(filteredList.length).toEqual(1);
+    });
 
+    it('returns empty list', () => {
+    let difficulty = '0' ;
+    let list = [{info: {attack: '8', defense: '5', magic: '3', difficulty: '4'}}]
+    let filteredList = filtrarPorDifficultad(difficulty, list);
+     expect(filteredList.length).toEqual(0);
+    });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
 
 describe ('Función barra buscadora', () => {
     it('is a function', () => {
@@ -83,3 +79,4 @@ describe ('Función barra buscadora', () => {
         expect(filteredList.length).toEqual(2);
     });
 });
+

@@ -1,6 +1,8 @@
 import data from './data/lol/lol.js';
 import {dropdownTags, dropdownPower, dropdownDifficulty} from './data.js';
-import { filtrarPorRoles, filtrarPorPoder , barraBuscadora} from './hero.js';
+
+import { filtrarPorRoles, filtrarPorPoder , filtrarPorDifficultad, barraBuscadora} from './hero.js';
+
 
 
 const container = document.getElementById('container');
@@ -14,12 +16,12 @@ function limpiarLista() {
 
 
 
-function filtrarPorDifficultad (event) {
+/*function filtrarPorDifficultad (event) {
     var filterDifficulty= event.currentTarget.dataset.difficulty
     const difficultyList = list.filter(elementoArray => elementoArray.info.difficulty == filterDifficulty);
     limpiarLista();
     dibujarHeroes(difficultyList)
-}
+}*/
 
 function dibujarHeroes(list) {
     
@@ -76,6 +78,22 @@ document.querySelectorAll(".rol").forEach(function(element) {
     })
 }); 
 
+
+const buttonDifficulty = document.getElementById("buttonD");
+buttonDifficulty.addEventListener("click", ()=>{
+    dropdownDifficulty()
+});
+
+document.querySelectorAll(".difficulty").forEach(function(element) {
+    element.addEventListener("click", (event) => {
+        let listaFiltrada = filtrarPorDifficultad(event.currentTarget.dataset.difficulty, list);
+        limpiarLista();
+        dibujarHeroes(listaFiltrada);
+    })
+});
+
+
+
 const buttonPower = document.getElementById("buttonP");
 buttonPower.addEventListener("click", ()=>{
     dropdownPower()
@@ -91,13 +109,11 @@ document.querySelectorAll(".partype").forEach(function(element) {
 }); 
     
 
-const buttonDifficulty = document.getElementById("buttonD");
-buttonDifficulty.addEventListener("click", ()=>{
-    dropdownDifficulty()
-});
-document.querySelectorAll(".dificultad").forEach(function(element) {
+
+
+/*document.querySelectorAll(".dificultad").forEach(function(element) {
     element.addEventListener("click", filtrarPorDifficultad)
-}); 
+});*/ 
 
 const searchbar = document.getElementById('searchbox');
 searchbar.addEventListener('keyup', (e) => {
