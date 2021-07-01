@@ -1,5 +1,3 @@
-export {filtrarPorRoles, filtrarPorPoder, filtrarPorDifficultad, barraBuscadora};
-
 function filtrarPorRoles(tag, list) {
     return list.filter(elementoArray => elementoArray.tags.includes(tag));
 }
@@ -15,3 +13,5 @@ function filtrarPorDifficultad(difficulty, list) {
 function barraBuscadora (searched ,list) {
     return list.filter(elementoArray => elementoArray.name.toLowerCase().includes(searched))
 }
+
+export {filtrarPorRoles, filtrarPorPoder, filtrarPorDifficultad, barraBuscadora};

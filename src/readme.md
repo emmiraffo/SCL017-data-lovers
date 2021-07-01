@@ -19,7 +19,7 @@ El proyecto LOL responde a la necesidad de la comunidad de League of Leguends qu
 #### CRITERIOS DE ACEPTACIÓN:
     - Pestaña con información básica del juego (Qué es, cómo se juega).
     - Organizar de forma concisa la información
-    - Que se visualice en diferentes dispositivos
+    - Que se visualice en computadoras de escritorio y telefónos móviles
     - Link de enlace para galería de campeones
 ###  LOL JUGADOR DE OTROS JUEGOS Y QUE ESTA INTERESADO APRENDER LOL
 ##### LO QUE NECESITA: Una manera de clasificar a los personajes, filtrar los rol, poder y dificultad.

@@ -18,11 +18,12 @@ img{
    margin-top:0; 
    margin: 0 20% 0;
    display: block;
+   box-shadow: 0 0 40px rgb(200, 153, 22);
    
 }
 
 p{
-    font-size: 200px;
+    font-size: 150px;
     text-align: center;
     text-shadow: 6px 4px 6px rgb(200, 153, 22);
     margin: 0px;
@@ -31,10 +32,10 @@ p{
 h2 {
     display: block;
     font-style: oblique;
-    font-size: 2.5em;
+    font-size: 2em;
     text-align: center;
-    color: #192081;
-    margin: 0 5% 0;
+    color: #14195f;
+    margin: 0 10% 0;
     background-color: rgba(255, 255, 255, 0.931);
     border-radius: 10px;
 }
@@ -53,10 +54,10 @@ h1{
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
     margin-top: auto;
-    margin: 0 5% 0;
+    margin: 0 10% 0;
     justify-content: space-around;
     align-items: center;
-    background-color: #192081c4;
+    background-color: #230d6dad;
 }
 @media screen and ( max-width:415px ){
     .info{
