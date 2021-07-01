@@ -1,12 +1,10 @@
 import data from './data/lol/lol.js';
 import {dropdownTags, dropdownPower, dropdownDifficulty} from './data.js';
-
 import { filtrarPorRoles, filtrarPorPoder , filtrarPorDifficultad, barraBuscadora} from './hero.js';
 
-
+const list = Object.values(data.data);
 
 const container = document.getElementById('container');
-const list = Object.values(data.data);
 
 
 function limpiarLista() {
@@ -46,11 +44,6 @@ function dibujarHeroes(list) {
     }
 }
 dibujarHeroes(list);
-
-function limpiarFiltros (){
-    limpiarLista ()
-    dibujarHeroes (list)
-}
 
 //listeners
 const buttonTags = document.getElementById("buttonT");
@@ -105,7 +98,8 @@ searchbar.addEventListener('keyup', (e) => {
 
 const limpiadorFiltros = document.getElementById("clearFilter");
     limpiadorFiltros.addEventListener("click",  ()=>{
-        limpiarFiltros()
+        limpiarLista ()
+        dibujarHeroes (list)
     });
 
 //FinListeners

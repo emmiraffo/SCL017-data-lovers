@@ -2,8 +2,8 @@ import lol from './data/lol/lol.js';
 
 var url = window.location.search;
 var urlParams = new URLSearchParams(url);
-var name = urlParams.get('id');
-var champion = lol.data[name];
+var id = urlParams.get('id');
+var champion = lol.data[id];
 
 const nameChampion = document.getElementById('name');
 const img = document.getElementById('img');
