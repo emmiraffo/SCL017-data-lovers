@@ -11,7 +11,7 @@
 
 
 body{
-    background: rgb(2, 37, 37);
+    background: rgb(185, 199, 199);
     line-height: 1.3; 
     display: flex;
     color: floralwhite;
@@ -58,7 +58,7 @@ body{
 
 /*¿Cómo jugar League of Legends?*/
 .section:nth-child(2){
-    background-color: rgb(7, 27, 15);
+    background-color: rgb(255, 255, 255);
     background-size: cover; 
     background-image: url('imagenes/base.png');
     padding-top: 2%;
@@ -71,6 +71,7 @@ body{
     font-style: normal;
     font-family: 'Lora', serif; 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.549);
+    color: rgb(25, 58, 85);
 }
 
 .boxcontainer2{
@@ -125,7 +126,6 @@ body{
 .box-text:last-child{
     background-color: rgba(0, 0, 0, 0.623);
 }
-
 
 
 /*Desbloquea tus habilidades*/

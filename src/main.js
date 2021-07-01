@@ -50,7 +50,6 @@ const buttonTags = document.getElementById("buttonT");
 buttonTags.addEventListener("click", ()=>{
     dropdownTags()
 });
-
 document.querySelectorAll(".rol").forEach(function(element) {
     element.addEventListener("click", (event) => {
         let listaFiltrada = filtrarPorRoles(event.currentTarget.dataset.tags, list);
@@ -64,7 +63,6 @@ const buttonDifficulty = document.getElementById("buttonD");
 buttonDifficulty.addEventListener("click", ()=>{
     dropdownDifficulty()
 });
-
 document.querySelectorAll(".difficulty").forEach(function(element) {
     element.addEventListener("click", (event) => {
         let listaFiltrada = filtrarPorDifficultad(event.currentTarget.dataset.difficulty, list);
@@ -78,7 +76,6 @@ const buttonPower = document.getElementById("buttonP");
 buttonPower.addEventListener("click", ()=>{
     dropdownPower()
 });
-
 document.querySelectorAll(".partype").forEach(function(element) {
     element.addEventListener("click", (event) => {
         let listaFiltrada = filtrarPorPoder(event.currentTarget.dataset.partype, list);
@@ -87,6 +84,7 @@ document.querySelectorAll(".partype").forEach(function(element) {
 
     })
 }); 
+
 
 const searchbar = document.getElementById('searchbox');
 searchbar.addEventListener('keyup', (e) => {
