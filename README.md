@@ -35,3 +35,6 @@ El proyecto LOL responde a la necesidad de la comunidad de League of Leguends qu
     - Filtro de cálculos en base a STATS
     - Desplegar información del campeón y visualizar sus estadisticas
     
+    
+# Mira el resultado de la Aplicación AQUI: https://emmiraffo.github.io/SCL017-data-lovers/
+    
